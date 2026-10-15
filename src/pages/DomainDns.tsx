@@ -143,7 +143,7 @@ export function DnsTab({ domain }: { domain: Domain }) {
           </Table>
         )}
       </Card>
-      <p className="mt-3 text-sm text-kumo-subtle" aria-live="polite">
+      <p className="record-count mt-3 text-sm" aria-live="polite">
         Showing {rows.length} of {domain.records.length} records
       </p>
 
