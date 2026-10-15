@@ -19,3 +19,12 @@ instructions: |
   image-resizer and webhook-relay. Add ?theme=dark or ?theme=light to any path to
   force a color theme; it is kept while navigating inside the app.
   The design system is @cloudflare/kumo.
+
+# The merge policy: Exhibit posts the check "Exhibit policy". It passes, or it
+# needs a human; an approving review from a writer clears it.
+policy:
+  designSystem: "@cloudflare/kumo"
+  publicApi: [src/data/types.ts, src/lib/**]
+  human: [public-api, design-system-props]
+  approve:
+    intended: 0.9
