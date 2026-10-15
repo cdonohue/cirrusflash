@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { Meter, Table, Tabs } from "@cloudflare/kumo";
+import { Badge, Meter, Table, Tabs } from "@cloudflare/kumo";
 import { useStore } from "../lib/store.tsx";
 import { useTitle } from "../lib/useTitle.ts";
 import { formatCompact, formatNumber } from "../lib/format.ts";
@@ -51,6 +51,7 @@ export function AnalyticsPage() {
     <>
       <PageHeader
         title="Analytics"
+        meta={<Badge variant="info">Beta</Badge>}
         description={`Traffic across all domains in ${account.name}.`}
         actions={
           <div role="group" aria-label="Date range">
