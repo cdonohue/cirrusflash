@@ -21,12 +21,11 @@ instructions: |
   The design system is @cloudflare/kumo.
 
 # The merge policy: Exhibit posts the check "Exhibit policy". It passes, or it
-# needs a human; an approving review from a writer clears it.
+# needs a human; an approving review from a writer clears it. Each metric holds
+# the PR for a human (`then: human`) or passes it with a note (`then: note`).
 policy:
-  designSystem: "@cloudflare/kumo"
-  publicApi: [src/data/types.ts, src/lib/**]
-  human: [design-system-props, public-api, a11y]   # exact facts: always a human
-  a11y:
-    impact: serious                  # the least axe impact that needs a human
-  approve:
-    intended: 0.5                    # only clear mismatches; Clef varies about ±10% between runs
+  intentional:   { below: 0.5, then: human }                  # only clear mismatches; Clef varies about ±10% between runs
+  design-system: { package: "@cloudflare/kumo", then: human }
+  public-api:    { files: [src/data/types.ts, src/lib/**], then: human }
+  accessibility: { impact: serious, then: human }
+  side-effects:  { then: note }
