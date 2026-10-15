@@ -42,7 +42,7 @@ export function DnsTab({ domain }: { domain: Domain }) {
         description={`Records that tell resolvers where to send traffic for ${domain.name}.`}
         actions={
           <Button variant="primary" icon={PlusIcon} onClick={() => setEditor({ open: true, record: null })}>
-            Add record
+            Add DNS record
           </Button>
         }
         flush
@@ -73,7 +73,7 @@ export function DnsTab({ domain }: { domain: Domain }) {
                   </Button>
                 ) : (
                   <Button variant="primary" icon={PlusIcon} onClick={() => setEditor({ open: true, record: null })}>
-                    Add record
+                    Add DNS record
                   </Button>
                 )
               }
