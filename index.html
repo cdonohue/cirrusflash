@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Cirrusflash is a fictional cloud dashboard used as a demo for Exhibit." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Cirrusflash</title>
+    <script>
+      // Apply the theme before first paint so screenshots never catch a flash
+      // of the wrong mode. Mirrors resolveMode() in src/lib/theme.tsx.
+      (function () {
+        var mode = "light";
+        try {
+          var param = new URLSearchParams(location.search).get("theme");
+          var saved = null;
+          try { saved = localStorage.getItem("cirrusflash:theme"); } catch (e) {}
+          var choice = param === "light" || param === "dark" ? param
+            : saved === "light" || saved === "dark" || saved === "system" ? saved
+            : "system";
+          if (choice === "system") {
+            choice = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          }
+          mode = choice;
+        } catch (e) {}
+        document.documentElement.setAttribute("data-mode", mode);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

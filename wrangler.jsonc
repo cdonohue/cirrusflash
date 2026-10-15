@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "cirrusflash",
+  "compatibility_date": "2026-10-01",
+  // The assets are served first; the Worker only answers paths that are not
+  // files, with index.html, so the client-side router renders them. Previews
+  // ignore `not_found_handling`, which is why this is code.
+  "main": "worker/index.ts",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS"
+  },
+  "previews": {}
+}
