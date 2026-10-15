@@ -15,6 +15,8 @@ export interface DnsRecord {
   proxied: boolean;
   ttl: Ttl;
   priority?: number;
+  /** A note for the people who manage the zone. */
+  comment?: string;
 }
 
 export interface Domain {
