@@ -25,6 +25,8 @@ instructions: |
 policy:
   designSystem: "@cloudflare/kumo"
   publicApi: [src/data/types.ts, src/lib/**]
-  human: [public-api, design-system-props]
+  human: [public-api, design-system-props, a11y]
+  a11y:
+    impact: serious                  # the least axe impact that needs a human
   approve:
     intended: 0.9
