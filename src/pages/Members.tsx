@@ -21,7 +21,7 @@ export function MembersPage() {
         title="Members"
         description={`People who can sign in to ${account.name} and what they are allowed to do.`}
         actions={
-          <Button variant="primary" icon={UserPlusIcon} onClick={() => setInviteOpen(true)}>
+          <Button variant="primary" icon={UserPlusIcon} className="uppercase" onClick={() => setInviteOpen(true)}>
             Invite member
           </Button>
         }

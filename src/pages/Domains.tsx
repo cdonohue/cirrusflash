@@ -38,7 +38,7 @@ export function DomainsPage() {
         title="Domains"
         description="Domains you have added to this account. Select a domain to manage its DNS records and SSL/TLS."
         actions={
-          <Button variant="primary" icon={PlusIcon} onClick={() => setAddOpen(true)}>
+          <Button variant="primary" icon={PlusIcon} className="rounded-full" onClick={() => setAddOpen(true)}>
             Add a domain
           </Button>
         }
