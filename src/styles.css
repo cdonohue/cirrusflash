@@ -17,6 +17,10 @@
       sans-serif;
   }
 
+  h1 {
+    color: #b91c1c;
+  }
+
   /* Numbers in tables and tiles line up and do not shift width. */
   .tabular {
     font-variant-numeric: tabular-nums;
