@@ -88,7 +88,7 @@ export function AnalyticsPage() {
           />
         </Card>
 
-        <Card title="Top paths" description={`Most requested paths, ${long}`} flush>
+        <Card title="Most requested paths" description={`Paths by number of requests, ${long}`} flush>
           <Table>
             <Table.Header>
               <Table.Row>
