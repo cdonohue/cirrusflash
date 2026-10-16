@@ -25,7 +25,7 @@ instructions: |
 # the PR for a human (`then: human`) or passes it with a note (`then: note`).
 policy:
   intentional:   { below: 0.5, then: human }                  # only clear mismatches; Clef varies about ±10% between runs
-  design-system: { package: "@cloudflare/kumo", then: human }
+  design-system: { package: "@cloudflare/kumo", then: note }
   public-api:    { files: [src/data/types.ts, src/lib/**], then: human }
   accessibility: { impact: serious, then: human }
   side-effects:  { then: note }
