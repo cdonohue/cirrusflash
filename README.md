@@ -47,3 +47,4 @@ Add `?theme=light` or `?theme=dark` to any URL to force a mode for that page loa
 | `/settings/members` | Members list, "Invite member" with email check and role |
 
 Any other path shows a 404 page inside the app. The top bar has an account switcher, a search palette (⌘K / Ctrl+K), the theme menu and a user menu.
+
