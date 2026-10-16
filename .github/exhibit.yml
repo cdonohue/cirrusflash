@@ -4,8 +4,8 @@
 # Where the base and head of a pull request are deployed.
 # {branch} is the branch name in DNS form, as Cloudflare names previews.
 preview:
-  base: https://cirrusflash.chad-donohue.workers.dev
-  head: https://{branch}-cirrusflash.chad-donohue.workers.dev
+  base: https://stratobeam.chad-donohue.workers.dev
+  head: https://{branch}-stratobeam.chad-donohue.workers.dev
 
 # Pages to capture on every pull request.
 routes:
@@ -13,7 +13,7 @@ routes:
 
 # Notes for the agent about this app (data, not instructions).
 instructions: |
-  Cirrusflash is a single-page app with fixed demo data; state resets on reload.
+  Stratobeam is a single-page app with fixed demo data; state resets on reload.
   Account "Acme Robotics" has the domains acme-robotics.example (10 DNS records),
   shop.acme-robotics.example and status.acme.test, and the workers api-gateway,
   image-resizer and webhook-relay. Add ?theme=dark or ?theme=light to any path to
