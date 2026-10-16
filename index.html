@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Cirrusflash is a fictional cloud dashboard used as a demo for Exhibit." />
+    <meta name="description" content="Stratobeam is a fictional cloud dashboard used as a demo for Exhibit." />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>Cirrusflash</title>
+    <title>Stratobeam</title>
     <script>
       // Apply the theme before first paint so screenshots never catch a flash
       // of the wrong mode. Mirrors resolveMode() in src/lib/theme.tsx.
@@ -14,7 +14,7 @@
         try {
           var param = new URLSearchParams(location.search).get("theme");
           var saved = null;
-          try { saved = localStorage.getItem("cirrusflash:theme"); } catch (e) {}
+          try { saved = localStorage.getItem("stratobeam:theme"); } catch (e) {}
           var choice = param === "light" || param === "dark" ? param
             : saved === "light" || saved === "dark" || saved === "system" ? saved
             : "system";

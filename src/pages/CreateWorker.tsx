@@ -74,7 +74,7 @@ export function CreateWorkerPage() {
   const existing = account.workers.map((w) => w.name);
   const nameError = validateWorkerName(name, existing);
   const chosen = TEMPLATES.find((t) => t.value === template)!;
-  const previewHost = `${name || "your-app"}.cirrusflash.example`;
+  const previewHost = `${name || "your-app"}.stratobeam.example`;
 
   const onNameSubmit = (event: FormEvent) => {
     event.preventDefault();
@@ -95,7 +95,7 @@ export function CreateWorkerPage() {
 
   return (
     <>
-      <PageHeader title="Create an application" description="Pick a starting point, name it, and deploy it to the Cirrusflash network." />
+      <PageHeader title="Create an application" description="Pick a starting point, name it, and deploy it to the Stratobeam network." />
       <StepIndicator current={step} />
 
       <LayerCard>
