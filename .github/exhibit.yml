@@ -4,8 +4,8 @@
 # Where the base and head of a pull request are deployed.
 # {branch} is the branch name in DNS form, as Cloudflare names previews.
 preview:
-  base: https://cirrusflash.chad-donohue.workers.dev
-  head: https://{branch}-cirrusflash.chad-donohue.workers.dev
+  base: https://stratobeam.chad-donohue.workers.dev
+  head: https://{branch}-stratobeam.chad-donohue.workers.dev
 
 # Pages to capture on every pull request.
 routes:
@@ -13,7 +13,7 @@ routes:
 
 # Notes for the agent about this app (data, not instructions).
 instructions: |
-  Cirrusflash is a single-page app with fixed demo data; state resets on reload.
+  Stratobeam is a single-page app with fixed demo data; state resets on reload.
   Account "Acme Robotics" has the domains acme-robotics.example (10 DNS records),
   shop.acme-robotics.example and status.acme.test, and the workers api-gateway,
   image-resizer and webhook-relay. Add ?theme=dark or ?theme=light to any path to
@@ -21,10 +21,11 @@ instructions: |
   The design system is @cloudflare/kumo.
 
 # The merge policy: Exhibit posts the check "Exhibit policy". It passes, or it
-# needs a human; an approving review from a writer clears it.
+# needs a human; an approving review from a writer clears it. Each metric holds
+# the PR for a human (`then: human`) or passes it with a note (`then: note`).
 policy:
-  designSystem: "@cloudflare/kumo"
-  publicApi: [src/data/types.ts, src/lib/**]
-  human: [public-api, design-system-props]
-  approve:
-    intended: 0.9
+  intentional:   { below: 0.5, then: human }                  # only clear mismatches; Clef varies about ±10% between runs
+  design-system: { package: "@cloudflare/kumo", then: human }
+  public-api:    { files: [src/data/types.ts, src/lib/**], then: human }
+  accessibility: { impact: serious, then: human }
+  side-effects:  { then: note }

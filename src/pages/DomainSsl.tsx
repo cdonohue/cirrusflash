@@ -7,7 +7,7 @@ import { Card } from "../components/ui.tsx";
 
 const MODES: Array<{ value: SslMode; label: string; description: string }> = [
   { value: "off", label: "Off", description: "No encryption. Visitors can only reach this domain over HTTP. Not recommended." },
-  { value: "flexible", label: "Flexible", description: "Encrypts traffic between visitors and Cirrusflash. Traffic to your origin stays unencrypted." },
+  { value: "flexible", label: "Flexible", description: "Encrypts traffic between visitors and Stratobeam. Traffic to your origin stays unencrypted." },
   { value: "full", label: "Full", description: "Encrypts end to end, using any certificate on your origin, including self-signed ones." },
   { value: "strict", label: "Full (strict)", description: "Encrypts end to end and requires a valid, trusted certificate on your origin." },
 ];
@@ -38,7 +38,7 @@ export function SslTab({ domain }: { domain: Domain }) {
         </div>
       )}
 
-      <Card title="Encryption mode" description="How Cirrusflash connects to visitors and to your origin server.">
+      <Card title="Encryption mode" description="How Stratobeam connects to visitors and to your origin server.">
         <Radio.Group
           legend="SSL/TLS encryption mode"
           appearance="card"

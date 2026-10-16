@@ -91,7 +91,7 @@ export function HomePage() {
         <LayerCard.Primary className="flex flex-col items-start gap-3 p-5 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <Text variant="heading" as="h2">
-              Bring another domain to Cirrusflash
+              Bring another domain to Stratobeam
             </Text>
             <Text variant="secondary">
               Add a domain, then point its nameservers to us. Read{" "}
