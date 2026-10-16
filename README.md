@@ -1,6 +1,6 @@
 # cirrusflash
 
-A demo web app for testing [Exhibit](https://github.com/cdonohue/exhibit), which posts before-and-after screenshots of the pages a pull request changes.
+A demo web app for testing Exhibit, which posts before-and-after screenshots of the pages a pull request changes.
 
 It looks like a cloud provider's admin dashboard and is built with Cloudflare's Kumo design system.
 
