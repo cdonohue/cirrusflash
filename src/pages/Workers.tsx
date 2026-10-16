@@ -20,7 +20,7 @@ export function WorkersPage() {
     <>
       <PageHeader
         title="Workers & Pages"
-        description="Serverless applications and static sites that run on the Cirrusflash network."
+        description="Serverless applications and static sites that run on the Stratobeam network."
         actions={
           <LinkButton href="/workers/create" variant="primary" icon={PlusIcon}>
             Create application
@@ -71,7 +71,7 @@ export function WorkersPage() {
                     <Link href={`/workers/${w.name}`} className="font-medium">
                       {w.name}
                     </Link>
-                    <span className="block text-xs text-kumo-subtle">{w.name}.cirrusflash.example</span>
+                    <span className="block text-xs text-kumo-subtle">{w.name}.stratobeam.example</span>
                   </Table.Cell>
                   <Table.Cell>
                     <Badge variant={w.type === "pages" ? "teal" : "blue"}>{w.type === "pages" ? "Pages" : "Worker"}</Badge>

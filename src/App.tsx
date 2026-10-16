@@ -103,7 +103,7 @@ function Shell() {
           </RouteProvider>
         </main>
         <footer className="border-t border-kumo-hairline px-4 py-4 text-center text-xs text-kumo-subtle sm:px-6">
-          Cirrusflash is a fictional product. This is a demo for Exhibit.
+          Stratobeam is a fictional product. This is a demo for Exhibit.
         </footer>
       </div>
     </Sidebar.Provider>
