@@ -73,7 +73,7 @@ export function DomainsPage() {
             <Empty
               icon={filtered ? <MagnifyingGlassIcon size={32} aria-hidden="true" /> : <GlobeHemisphereWestIcon size={32} aria-hidden="true" />}
               title={filtered ? "No domains match your filters" : "No domains yet"}
-              description={filtered ? "Try a different name or status." : "Add a domain to start routing its traffic through Cirrusflash."}
+              description={filtered ? "Try a different name or status." : "Add a domain to start routing its traffic through Stratobeam."}
               contents={
                 filtered ? (
                   <Button

@@ -1,11 +1,11 @@
 import { Badge } from "@cloudflare/kumo";
 
 /**
- * Cirrusflash mark: three stacked cloud bands with a small flash. Original
+ * Stratobeam mark: three stacked cloud bands with a small flash. Original
  * artwork for a fictional brand; colours come from Kumo tokens so it adapts
  * to light and dark mode.
  */
-export function CirrusflashMark({ size = 28 }: { size?: number }) {
+export function StratobeamMark({ size = 28 }: { size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 32 32" aria-hidden="true" focusable="false" className="shrink-0">
       <rect x="0" y="0" width="32" height="32" rx="8" fill="var(--color-kumo-contrast)" />
@@ -23,10 +23,10 @@ export function CirrusflashMark({ size = 28 }: { size?: number }) {
 export function Brand({ compact = false }: { compact?: boolean }) {
   return (
     <span className="flex min-w-0 items-center gap-2">
-      <CirrusflashMark />
+      <StratobeamMark />
       {!compact && (
         <>
-          <span className="truncate text-base font-semibold tracking-tight text-kumo-default">Cirrusflash</span>
+          <span className="truncate text-base font-semibold tracking-tight text-kumo-default">Stratobeam</span>
           <Badge variant="outline" className="shrink-0">
             Demo
           </Badge>
