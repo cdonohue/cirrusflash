@@ -29,3 +29,7 @@ policy:
   public-api:    { files: [src/data/types.ts, src/lib/**], then: human }
   accessibility: { impact: serious, then: human }
   side-effects:  { then: note }
+
+# Exhibit turns on GitHub's auto-merge when the check passes (or a writer approves).
+# GitHub merges when every required check is done. The targets above decide the check.
+merge: auto
