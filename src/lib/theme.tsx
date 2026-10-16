@@ -13,7 +13,7 @@ import { useRouter } from "./router.tsx";
 export type ThemeChoice = "light" | "dark" | "system";
 export type ThemeMode = "light" | "dark";
 
-const STORAGE_KEY = "cirrusflash:theme";
+const STORAGE_KEY = "stratobeam:theme";
 
 function readSaved(): ThemeChoice {
   try {

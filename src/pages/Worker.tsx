@@ -43,7 +43,7 @@ export function WorkerPage({ name, tab }: { name: string; tab: WorkerTab }) {
           <Banner
             icon={<CheckCircleIcon weight="fill" aria-hidden="true" />}
             title={`Deployed ${worker.name}`}
-            description={`Your application is live at https://${worker.name}.cirrusflash.example.`}
+            description={`Your application is live at https://${worker.name}.stratobeam.example.`}
             action={<Banner.Action variant="ghost" icon={<XIcon aria-hidden="true" />} aria-label="Dismiss" onClick={() => setShowDeployed(false)} />}
           />
         </div>
@@ -55,7 +55,7 @@ export function WorkerPage({ name, tab }: { name: string; tab: WorkerTab }) {
         description={`Last deployed ${worker.lastDeployed}. Template: ${TEMPLATES.find((t) => t.value === worker.template)?.label ?? worker.template}.`}
         actions={
           <div className="w-full sm:w-80">
-            <ClipboardText text={`${worker.name}.cirrusflash.example`} size="base" labels={{ copyAction: "Copy application URL" }} />
+            <ClipboardText text={`${worker.name}.stratobeam.example`} size="base" labels={{ copyAction: "Copy application URL" }} />
           </div>
         }
       />
@@ -267,7 +267,7 @@ function SettingsTab({ worker }: { worker: Worker }) {
             </div>
             <Dialog.Description className="mb-5 text-kumo-subtle">
               This permanently deletes the application and stops serving{" "}
-              <span className="font-mono text-kumo-default">{worker.name}.cirrusflash.example</span>.
+              <span className="font-mono text-kumo-default">{worker.name}.stratobeam.example</span>.
             </Dialog.Description>
             <Input
               label={
