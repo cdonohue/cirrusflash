@@ -157,7 +157,7 @@ function SettingsTab({ worker }: { worker: Worker }) {
         title="Variables and secrets"
         description="Values available to your code as environment bindings."
         actions={
-          <Button variant="secondary" icon={PlusIcon} onClick={() => setAddOpen(true)}>
+          <Button variant="secondary" icon={PlusIcon} className="h-6 text-xs" onClick={() => setAddOpen(true)}>
             Add variable
           </Button>
         }
@@ -235,7 +235,7 @@ function SettingsTab({ worker }: { worker: Worker }) {
               Removes the application, its deployments and its variables. This cannot be undone.
             </Text>
           </div>
-          <Button variant="destructive" icon={TrashIcon} onClick={() => setDeleteOpen(true)}>
+          <Button variant="destructive" icon={TrashIcon} className="h-9 px-5" onClick={() => setDeleteOpen(true)}>
             Delete worker
           </Button>
         </div>
