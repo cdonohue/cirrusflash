@@ -1,10 +1,10 @@
-# cirrusflash
+# stratobeam
 
-A demo web app for testing [Exhibit](https://github.com/cdonohue/exhibit), which posts before-and-after screenshots of the pages a pull request changes.
+A demo web app for testing Exhibit, which posts before-and-after screenshots of the pages a pull request changes.
 
 It looks like a cloud provider's admin dashboard and is built with Cloudflare's Kumo design system.
 
-**Cirrusflash is a fictional product.** The brand, logo, account ("Acme Robotics"), user ("Dana Park") and all data are made up. There is no sign-in and no backend. All domains use `.example` or `.test`.
+**Stratobeam is a fictional product.** The brand, logo, account ("Acme Robotics"), user ("Dana Park") and all data are made up. There is no sign-in and no backend. All domains use `.example` or `.test`.
 
 ## Run it
 
