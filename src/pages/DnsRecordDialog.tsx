@@ -160,7 +160,7 @@ function RecordForm({ record, domain, onDone }: { record: DnsRecord | null; doma
           )}
         </div>
         {canProxy ? (
-          <Switch label="Proxy through Cirrusflash" checked={proxied} onCheckedChange={setProxied} />
+          <Switch label="Proxy through Stratobeam" checked={proxied} onCheckedChange={setProxied} />
         ) : (
           <Text variant="secondary" size="sm">
             {type} records are DNS only and cannot be proxied.

@@ -155,12 +155,12 @@ function OverviewTab({ domain, paths }: { domain: Domain; paths: Record<DomainTa
         </Text>
         <div className="mt-3 grid grid-cols-1 gap-4 md:grid-cols-3">
           <QuickAction href={paths.dns} icon={<ListBulletsIcon size={18} aria-hidden="true" />} title="DNS records" description="Add, edit and remove the records that point this domain at your services." />
-          <QuickAction href={paths.ssl} icon={<LockKeyIcon size={18} aria-hidden="true" />} title="SSL/TLS" description="Choose how traffic between visitors, Cirrusflash and your origin is encrypted." />
+          <QuickAction href={paths.ssl} icon={<LockKeyIcon size={18} aria-hidden="true" />} title="SSL/TLS" description="Choose how traffic between visitors, Stratobeam and your origin is encrypted." />
           <QuickAction href="/analytics" icon={<ChartLineIcon size={18} aria-hidden="true" />} title="Analytics" description="See requests, bandwidth and the most visited paths across your account." />
         </div>
       </section>
 
-      <Card title="Nameservers" description="Your registrar must point to these Cirrusflash nameservers.">
+      <Card title="Nameservers" description="Your registrar must point to these Stratobeam nameservers.">
         <ul className="m-0 grid list-none grid-cols-1 gap-2 p-0 sm:grid-cols-2">
           {domain.nameservers.map((ns) => (
             <li key={ns}>

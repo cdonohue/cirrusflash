@@ -24,7 +24,7 @@ export function nameserversFor(domain: string): [string, string] {
   const first = NAMESERVER_NAMES[h % NAMESERVER_NAMES.length]!;
   let second = NAMESERVER_NAMES[(h >>> 8) % NAMESERVER_NAMES.length]!;
   if (second === first) second = NAMESERVER_NAMES[(NAMESERVER_NAMES.indexOf(first) + 3) % NAMESERVER_NAMES.length]!;
-  return [`${first}.ns.cirrusflash.example`, `${second}.ns.cirrusflash.example`];
+  return [`${first}.ns.stratobeam.example`, `${second}.ns.stratobeam.example`];
 }
 
 function rec(
