@@ -18,7 +18,7 @@ function SidebarBrand() {
     <a
       href="/"
       className="flex min-h-9 items-center rounded-lg px-1 outline-none focus-visible:ring-2 focus-visible:ring-kumo-focus"
-      aria-label="Cirrusflash account home"
+      aria-label="Stratobeam account home"
     >
       <Brand compact={collapsed} />
     </a>
