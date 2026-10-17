@@ -113,7 +113,7 @@ export function CreateWorkerPage() {
                 ))}
               </Radio.Group>
               <div className="flex justify-end">
-                <Button variant="primary" onClick={() => goTo(1)}>
+                <Button variant="primary" className="uppercase" onClick={() => goTo(1)}>
                   Next
                   <ArrowRightIcon size={16} aria-hidden="true" />
                 </Button>
@@ -185,7 +185,7 @@ export function CreateWorkerPage() {
                   <ArrowLeftIcon size={16} aria-hidden="true" />
                   Back
                 </Button>
-                <Button variant="primary" icon={RocketLaunchIcon} loading={deploying} onClick={deploy}>
+                <Button variant="primary" className="rounded-full" icon={RocketLaunchIcon} loading={deploying} onClick={deploy}>
                   {deploying ? "Deploying…" : "Deploy"}
                 </Button>
               </div>

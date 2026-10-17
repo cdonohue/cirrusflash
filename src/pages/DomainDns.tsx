@@ -68,11 +68,11 @@ export function DnsTab({ domain }: { domain: Domain }) {
               description={query ? "Try another type, name or value." : "Add an A or CNAME record to start sending traffic to your services."}
               contents={
                 query ? (
-                  <Button variant="secondary" onClick={() => setQuery("")}>
+                  <Button variant="secondary" className="h-6 text-xs" onClick={() => setQuery("")}>
                     Clear search
                   </Button>
                 ) : (
-                  <Button variant="primary" icon={PlusIcon} onClick={() => setEditor({ open: true, record: null })}>
+                  <Button variant="primary" className="rounded-full" icon={PlusIcon} onClick={() => setEditor({ open: true, record: null })}>
                     Add record
                   </Button>
                 )
@@ -117,6 +117,7 @@ export function DnsTab({ domain }: { domain: Domain }) {
                         <DropdownMenu.Trigger
                           render={
                             <Button
+                              className="h-6 text-xs"
                               variant="ghost"
                               shape="square"
                               size="sm"

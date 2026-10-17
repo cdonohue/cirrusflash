@@ -31,7 +31,7 @@ export function HomePage() {
         title={account.name}
         description="An overview of your domains, applications and traffic across this account."
         actions={
-          <Button variant="primary" icon={PlusIcon} onClick={() => setAddOpen(true)}>
+          <Button variant="primary" className="rounded-full" icon={PlusIcon} onClick={() => setAddOpen(true)}>
             Add a domain
           </Button>
         }
@@ -98,7 +98,7 @@ export function HomePage() {
               <Link href="/domains">your domain list</Link> to see what is already connected.
             </Text>
           </div>
-          <Button variant="secondary" icon={PlusIcon} onClick={() => setAddOpen(true)}>
+          <Button variant="secondary" className="rounded-full" icon={PlusIcon} onClick={() => setAddOpen(true)}>
             Add a domain
           </Button>
         </LayerCard.Primary>
