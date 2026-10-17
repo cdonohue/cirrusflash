@@ -30,6 +30,6 @@ policy:
   accessibility: { impact: serious, then: human }
   side-effects:  { then: note }
 
-# Exhibit turns on GitHub's auto-merge when the check passes (or a writer approves).
-# GitHub merges when every required check is done. The targets above decide the check.
-merge: auto
+# Auto-merge is off: a PR whose check passes waits for a person to merge it.
+# `merge: auto` turns on GitHub's auto-merge when the check passes (or a writer approves).
+merge: off
