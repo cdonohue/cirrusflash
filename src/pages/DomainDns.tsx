@@ -20,7 +20,7 @@ export function DnsTab({ domain }: { domain: Domain }) {
   const [editor, setEditor] = useState<{ open: boolean; record: DnsRecord | null }>({ open: false, record: null });
   const [deleting, setDeleting] = useState<DnsRecord | null>(null);
 
-  const rows = useMemo(() => {
+  const visibleRows = useMemo(() => {
     const q = query.trim().toLowerCase();
     if (!q) return domain.records;
     return domain.records.filter((r) =>
@@ -60,7 +60,7 @@ export function DnsTab({ domain }: { domain: Domain }) {
             />
           </div>
         </div>
-        {rows.length === 0 ? (
+        {visibleRows.length === 0 ? (
           <div className="p-8">
             <Empty
               icon={query ? <MagnifyingGlassIcon size={32} aria-hidden="true" /> : <ListBulletsIcon size={32} aria-hidden="true" />}
@@ -94,7 +94,7 @@ export function DnsTab({ domain }: { domain: Domain }) {
               </Table.Row>
             </Table.Header>
             <Table.Body>
-              {rows.map((r) => {
+              {visibleRows.map((r) => {
                 const name = displayName(r, domain.name);
                 return (
                   <Table.Row key={r.id}>
@@ -144,7 +144,7 @@ export function DnsTab({ domain }: { domain: Domain }) {
         )}
       </Card>
       <p className="mt-3 text-sm text-kumo-subtle" aria-live="polite">
-        Showing {rows.length} of {domain.records.length} records
+        Showing {visibleRows.length} of {domain.records.length} records
       </p>
 
       <DnsRecordDialog
