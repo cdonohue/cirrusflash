@@ -51,7 +51,7 @@ export function AnalyticsPage() {
     <>
       <PageHeader
         title="Analytics"
-        description={`Traffic across all domains in ${account.name}.`}
+        description={`Requests and cached requests across all domains in ${account.name}.`}
         actions={
           <div role="group" aria-label="Date range">
             <Tabs
