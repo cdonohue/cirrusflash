@@ -17,6 +17,14 @@
       sans-serif;
   }
 
+  /* The record count under a table: quieter than other help text. */
+  .record-count {
+    color: #71717a;
+  }
+  [data-mode="dark"] .record-count {
+    color: #3f3f46;
+  }
+
   /* Numbers in tables and tiles line up and do not shift width. */
   .tabular {
     font-variant-numeric: tabular-nums;
