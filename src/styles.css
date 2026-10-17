@@ -31,3 +31,7 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+h1 {
+  color: #b91c1c;
+}
